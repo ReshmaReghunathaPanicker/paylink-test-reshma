@@ -1,0 +1,33 @@
+<div class="fibonacci-block">
+
+  <div class="note-block">
+    <span>Fibonacci numbers are the following sequence of numbers
+    0,1,1,2,3,5,8,13,21,34,55...</span>
+    <p>By definition, the first two Fibonacci numbers are 0 and 1, and each remaining number is the sum of the previous two. </p>
+    <p>F(n)=F(n-1) + F(n-2)</p>
+    <p>with seed values F(0)=0 and F(1)=1</p>
+    <p>Eg: F(2)=1, F(3)=2, F(4)=3, F(5)=5, F(6)=8 etc..</p>
+  </div>
+
+  <label>Input : n = </label>
+  <input type="number" [(ngModel)]="inputData">
+  <button (click)="getFibonacci()">Submit</button>
+</div>
+
+<div *ngIf="errorInput" class="error-block">
+  <p class="invalid-error">Invalid input</p>
+</div>
+
+<div *ngIf="(outputData || outputData == 0) && !errorInput" class="fibonacci-output-block">
+  <div class="fibonacci-output-block">
+    <label>Output : F(n) = </label>
+    <p class="common-output">{{outputData}}</p>
+  </div>
+
+  <div class="fibonacci-output-block">
+    <label>Corresponding Fibonacci Series</label>
+    <p class="common-output">{{outputSeries}}</p>
+  </div>
+  
+</div>
+

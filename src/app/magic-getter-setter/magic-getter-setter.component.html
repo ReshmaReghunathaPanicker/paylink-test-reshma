@@ -1,0 +1,11 @@
+<div class="magic-getter-setter">
+    <div class="note-block">
+        <span>TypeScript setter and getter demo </span>
+    </div> 
+
+    <label>Set Age : </label>
+    <!-- Usage of TS getter and setter -->
+    <input type="text" [(ngModel)]="age" (ngModelChange)="setAge()">
+    <p *ngIf="!isError && age">Age set as {{person.age}}</p>
+    <p class="invalid-error" *ngIf="isError && age">{{errorMsg}}</p>
+</div>

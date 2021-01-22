@@ -1,0 +1,48 @@
+.header {
+  overflow: hidden;
+  background-color: #81c8e3e1;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header .header-right a:hover {
+  background-color: #68c1e3e1;
+  color: black;
+}
+
+.header .header-right a.active {
+  background-color: #416a8d;
+  color: white;
+}
+
+.header-right {
+    display: inline-block;
+    margin-left: 70px;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}

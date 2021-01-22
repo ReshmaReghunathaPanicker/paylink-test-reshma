@@ -1,0 +1,31 @@
+<div class="fizz-buzz-block">
+  <div class="note-block">
+    <span>Print all the numbers for the range 1-20 acc below condition. </span>
+    <p>If the number is,</p>
+    <p>- divisible by 3, print &#39;Fizz&#39;</p>
+    <p>- divisible by 5, print &#39;Buzz&#39;</p>
+    <p>- divisible by 3 &amp; 5, &#39;FizzBuzz&#39;</p>
+    <p>- otherwise print the number.</p>
+  </div>
+
+  <label>From : </label>
+  <input type="number" [(ngModel)]="start">
+
+  <label>To : </label>
+  <input type="number" [(ngModel)]="end">
+
+  <button (click)="getFizzBuzz()">Submit</button>
+</div>
+
+<div *ngIf="isError" class="error-block">
+  <p class="invalid-error">Input input</p>
+</div>
+
+<div *ngIf="invalidRange" class="error-block">
+  <p class="invalid-error">Input range is 1 to 20</p>
+</div>
+
+<div *ngIf="outputData != ''" >
+  <label>Output : </label>
+  <p class="common-output">{{outputData}}</p>
+</div>
